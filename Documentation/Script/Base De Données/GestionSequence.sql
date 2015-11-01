@@ -1,1 +1,0 @@
-SELECT pg_catalog.setval('"SQ_Journal_Ecriture"', 316, true);
