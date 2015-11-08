@@ -11,4 +11,15 @@
   <modules>
   	<module>kachiko-framework-persistence-core</module>
   </modules>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.personnel.kachiko.framework</groupId>
+  			<artifactId>
+  				kachiko-framework-persistence-core
+  			</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
