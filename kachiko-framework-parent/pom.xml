@@ -17,9 +17,7 @@
   	</dependency>
   </dependencies>
   <modules>
-  	
-  	
-  	<module>../kachiko-framework-service-parent</module>
   	<module>../kachiko-framework-data-access</module>
+  	<module>../kachiko-framework-service-parent</module>
   </modules>
 </project>
