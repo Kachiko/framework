@@ -8,7 +8,8 @@ import org.dozer.Mapper;
 
 public class DozerUtil {
 
-	private static Mapper mapper;
+	private static Mapper mapper = new DozerBeanMapper();
+	private static List<String> mappingFiles;
 	
 	public static void setMapper(Mapper mapper){
 		DozerUtil.mapper = mapper;
@@ -28,5 +29,15 @@ public class DozerUtil {
 	
 	public static <T, U> U map(final T source, final Class<U> destType){
 		return mapper.map(source, destType);
+	}
+	
+	public static void addMappingFile(String mappingFile){
+		mappingFiles.add(mappingFile);
+		mapper = new DozerBeanMapper(mappingFiles);
+	}
+	
+	public static void addMappingFiles(List<String> newMappingFiles){
+		mappingFiles.addAll(newMappingFiles);
+		mapper = new DozerBeanMapper(mappingFiles);
 	}
 }
